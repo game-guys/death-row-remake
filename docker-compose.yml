@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  giftless:
+    image: datopian/giftless
+    ports:
+      - "8080:8080"
+    environment:
+      - THREADS=2
+      - PORT=2
+      - MANAGE_SCRIPT_NAME=true
+      - CALLABLE=app
+      - HTTP=0.0.0.0:8080
+    restart: "no"
